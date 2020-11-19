@@ -4,19 +4,14 @@ n = int(input())
 
 a = list(map(int,input().split()))
 
-count = 0
-loop = [0]
-for i in loop[:]:
-    for b in a:
-        if (b % 2) == 0:
-            None
-        else:
-            print("だめー")
-            break
-    for b in a:
-        a[count] = b // 2
-        count = count + 1
-    count = 0
-    loop.append(i+1)
+loop = 0
+count = -1
+while loop < 1:
+    for i in range(n):
+        if a[i] % 2 == 1:
+            loop += 2
+        elif a[i] % 2 == 0:
+            a[i] = a[i] / 2
+    count += 1
 
-print(a)
+print(count)
